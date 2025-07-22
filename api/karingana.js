@@ -1,4 +1,4 @@
-// api/karingana.js (Express + Fetch)
+
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
@@ -28,10 +28,10 @@ app.post("/api/karingana", async (req, res) => {
       headers: {
         "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
         "Content-Type": "application/json",
-        "HTTP-Referer": "https://karingana-unitymoz.web.app", // seu domínio
+        "HTTP-Referer": "https://karingana-unitymoz.web.app",
       },
       body: JSON.stringify({
-        model: "openchat/openchat-3.5", // modelo gratuito bom
+        model: "openchat/openchat-3.5", 
         messages: [{ role: "user", content: prompt }],
       }),
     });
